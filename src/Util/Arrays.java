@@ -1,8 +1,23 @@
-public class Arrays 
-{
+public class Arrays {
 String [] customer = {"Terry Judson"",""Castillo Hipolito"",""Thornton Elwood"",""Berg Adan"",""Randall Jamal"",""Jennings Georgette"",""Lutz Rosalyn"",""Hodges Marco"",""Moses Petra"",""Reeves
-Oswaldo"",""Giles Elliot"",""Kane Kelly"",""Mendoza Rocky"",""Riddle Jason"",""Campbell Lewis"",""Riggs Avery"",""Lee Elmo"",""Craig Myra"",""Turner Leigh"",""Stanton Chad"",""Braun Deborah"",""Johnson
-Gregg"",""Mcpherson Karen"",""Holt Monica"",""Escobar Anna"",""Simpson Jacqueline"",""Erickson Alexandria"",""Mcfarland Kerry"",""Stone Tania"",""Miller"};
+Oswaldo"",""Giles Elliot"",""
+    Kane Kelly"",""
+    Mendoza Rocky"",""
+    Riddle Jason"",""
+    Campbell Lewis"",""
+    Riggs Avery"",""
+    Lee Elmo"",""
+    Craig Myra"",""
+    Turner Leigh"",""
+    Stanton Chad"",""
+    Braun Deborah"",""
+    Johnson Gregg"",""
+    Mcpherson Karen"",""
+    Holt Monica"",""
+    Escobar Anna"",""
+    Simpson Jacqueline"",""Erickson Alexandria"",""
+    Mcfarland Kerry"",""
+    Stone Tania"",""Miller"};
 
 String [] dataOfBirth = {"08/11/1979","09/02/1989","19/03/2000","30/06/1985","15/12/1986","19/06/1985","24/10/1994","19/03/1988","20/04/1990","15/10/1991","05/06/1993","09/07/1984","10/02/1990","06/07/1978","19/03/1990","12/12/1995
 ","05/05/1977","24/07/1994","03/10/1990","11/03/1994","26/04/1983","24/08/1998","08/10/1996","20/02/1983","06/10/1976
@@ -13,21 +28,15 @@ String [] creditCardNumber = {"4916522687392702 "",""4024007119381688 "",""40240
 "",""5505633796686860"",""5560111866542828"",""5479000829387472"",""30534944877051"",""30531659381337"",""30551017684313"",""36068300209637"",""36564441540237"",""36743104520674
 "",""5038868719342110"",""5018194931952980"",""5038349670099841"",""4026952752619217"",""4026913464578638"",""4913846332039720"};
 
-
-
-
-
 String [] make = {"Renault"," Peugeot"," BMW"," Audi"," Volkswagen"," Porsche"," Fiat"," Ferrari"," Lamborghini"," Suzuki"," Toyota"," Honda"}
 
-String [] model {"Sedan"," Coupe"," Sports Car"," Station Wagon"," Hatchback"," Convertible"," Sport-utility Vehicle"," Minivan"," Pickup Truck"};
+    String[] model = { "Sedan", " Coupe", " Sports Car", " Station Wagon", " Hatchback", " Convertible",
+            " Sport-utility Vehicle", " Minivan", " Pickup Truck" };
 
-String [] numberSeats = {"2"," 3"," 4"," 5"," 6"," 7"};
+    String[] numberSeats = { "2", " 3", " 4", " 5", " 6", " 7" };
 
+    String[] name = { "Bradley Arnoldo", "Clay Trey", "Bird Carroll", "Swanson Hugo", "Randolph Rogelio",
+            "Farmer Ilene", "Parrish Rosanna", "Morrison Jay", "Knapp Catherine", "Norman" };
 
-
-
-
-String [] name = {"Bradley Arnoldo","Clay Trey","Bird Carroll","Swanson Hugo","Randolph Rogelio","Farmer Ilene","Parrish Rosanna","Morrison Jay","Knapp Catherine","Norman"};
-
-String [] salaryLevel = {"Low, Medium, High"};
+    String[] salaryLevel = { "Low, Medium, High" };
 }
