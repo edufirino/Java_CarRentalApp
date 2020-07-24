@@ -1,7 +1,8 @@
+package model;
+
 import java.util.Date;
 
-public class Customer 
-{
+public class Customer {
 
     /**
      * @return the dateOfBirth
@@ -31,8 +32,6 @@ public class Customer
         this.name = name;
     }
 
-
-
     /**
      * @return the creditCardNumber
      */
@@ -47,9 +46,8 @@ public class Customer
         this.creditCardNumber = creditCardNumber;
     }
 
-
     private String name;
     private String creditCardNumber;
     private Date dateOfBirth;
-    
+
 }

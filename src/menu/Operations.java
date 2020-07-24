@@ -1,3 +1,5 @@
+package menu;
+
 public enum Operations {
 	LIST_ALL_STAFF(1, "List all staff"), LIST_STAFF_BY_CATEGORY(2, "List staff by categories"),
 	LIST_STAFF_BY_TASK(3, "List all Admin staff performing a certain task"),

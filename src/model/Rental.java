@@ -1,5 +1,6 @@
-public class Rental 
-{
+package model;
+
+public class Rental {
 
     /**
      * @return the staff
@@ -43,7 +44,6 @@ public class Rental
         this.car = car;
     }
 
-      
     private String staff;
     private String customer;
     private String car;

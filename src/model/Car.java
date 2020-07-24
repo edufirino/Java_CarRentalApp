@@ -1,3 +1,5 @@
+package model;
+
 public class Car {
 
     public String getRegNumber() {

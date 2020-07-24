@@ -1,6 +1,6 @@
+package model;
 
-public class Staff 
-{
+public class Staff {
 
     /**
      * @return the name
@@ -30,8 +30,6 @@ public class Staff
         this.salaryLevel = salaryLevel;
     }
 
-
-
     /**
      * @return the id
      */
@@ -46,10 +44,8 @@ public class Staff
         this.id = id;
     }
 
-  
-    
     private String name;
     private int id;
     private String salaryLevel;
-    
+
 }
