@@ -73,16 +73,16 @@ public class Menu {
     }
 
     private void listStaffByCategory() {
-        String option = getInput("Choose a Category from the list:");
+        // String option = getInput("Choose a Category from the list:");
 
     }
 
     private void listStaffByTask() {
-        String option = getInput("Choose a Task from the list:");
+        // String option = getInput("Choose a Task from the list:");
     }
 
     private void searchStaffByName() {
-        String option = getInput("Choose a Task from the list:");
+        // String option = getInput("Choose a Task from the list:");
     }
 
     private void listAllCustomers() {
