@@ -1,50 +1,42 @@
 package model;
 
+import model.car.Car;
+import model.staff.Staff;
+
 public class Rental {
 
-    /**
-     * @return the staff
-     */
-    public String getStaff() {
-        return staff;
-    }
+    private Staff staff;
+    private Customer customer;
+    private Car car;
 
-    /**
-     * @param staff the staff to set
-     */
-    public void setStaff(String staff) {
+    public Rental(Staff staff, Customer customer, Car car) {
         this.staff = staff;
-    }
-
-    /**
-     * @return the customer
-     */
-    public String getCustomer() {
-        return customer;
-    }
-
-    /**
-     * @param customer the customer to set
-     */
-    public void setCustomer(String customer) {
         this.customer = customer;
-    }
-
-    /**
-     * @return the car
-     */
-    public String getCar() {
-        return car;
-    }
-
-    /**
-     * @param car the car to set
-     */
-    public void setCar(String car) {
         this.car = car;
     }
 
-    private String staff;
-    private String customer;
-    private String car;
+    public Staff getStaff() {
+        return staff;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
 }

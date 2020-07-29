@@ -1,8 +1,8 @@
 package model.car;
 
 public class Family extends Car {
-    public Family(String regNumber, String make, String model, String numberSeats) {
-        super(regNumber, make, model, numberSeats);
+    public Family(String make, String model, String numberSeats) {
+        super(make, model, numberSeats);
         setType("Family");
     }
 

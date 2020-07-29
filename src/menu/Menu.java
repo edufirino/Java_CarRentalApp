@@ -1,19 +1,77 @@
 package menu;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
+import Util.Util;
+import model.Customer;
+import model.Rental;
+import model.car.Car;
+import model.staff.Staff;
+
 public class Menu {
+
+    ArrayList<Staff> ListStaff = new ArrayList<>();
+    ArrayList<Customer> ListCustomers = new ArrayList<>();
+    ArrayList<Rental> ListRentals = new ArrayList<>();
+    ArrayList<Car> ListCars = new ArrayList<>();
+    ArrayList<Car> ListRentedCars = new ArrayList<>();
+
+    public Menu() {
+        generateFakeData();
+        displayMenu();
+    }
+
+    public static void main(String[] args) {
+        new Menu();
+    }
+
     private static Scanner scanner = new Scanner(System.in);
 
-    // ╚ ╔ ╟ ─ ╩ ╦ ═ ╬ ╧ ╗ ╝
+    private void generateFakeData() {
+
+        for (int i = 0; i < 10; i++) {
+            ListStaff.add(Util.randomStaff());
+        }
+
+        for (int i = 0; i < 30; i++) {
+            ListCustomers.add(Util.randomCustomer());
+        }
+
+        for (int i = 0; i < 300; i++) {
+            ListCars.add(Util.randomCar());
+        }
+
+        Staff staff = null;
+        Car car = null;
+
+        for (Customer customer : ListCustomers) {
+            staff = ListStaff.get(Util.randomNumber(ListStaff.size()));
+
+            do {
+                car = ListCars.get(Util.randomNumber(ListCars.size()));
+            } while (ListRentedCars.contains(car));
+            ListRentedCars.add(car);
+
+            ListRentals.add(new Rental(staff, customer, car));
+        }
+
+    }
+
+    // public void
+
     public void displayMenu() {
-        jumpLines(20);
+        jumpLines(5);
+        lineBreak();
         for (Operations op : Operations.values()) {
             System.out.println(op.VAL() + ") " + op.DES());
         }
+        lineBreak();
 
         System.out.print("Selection: ");
         pick();
+        displayMenu();
     }
 
     public String getInput(String question) {
@@ -68,8 +126,34 @@ public class Menu {
         System.out.println();
     }
 
-    private void listAllStaff() {
+    private void printCells(ArrayList<String> cells) {
+        // ╚ ╔ ╟ ─ ╩ ╦ ═ ╬ ╧ ╗ ╝
+        // System.out.print("╔");
+        for (String cell : cells) {
+            System.out.print("╟ ");
+            System.out.print(cell);
 
+            System.out.print(" ╟");
+        }
+        System.out.println();
+
+    }
+
+    private void listAllStaff() {
+        // System.out.println();
+        String[] columns = { "Staff Number", "Name", "Salary Level", "Task" };
+
+        printCells(new ArrayList<>(Arrays.asList(columns)));
+
+        ArrayList<String> cells = new ArrayList<>();
+        for (Staff staff : ListStaff) {
+            cells.add(staff.getId());
+            cells.add(staff.getName());
+            cells.add(staff.getSalaryLevel());
+            cells.add(staff.getTask());
+            printCells(cells);
+            cells.clear();
+        }
     }
 
     private void listStaffByCategory() {

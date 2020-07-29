@@ -2,11 +2,20 @@ package Util;
 
 import java.util.Random;
 
+import model.Customer;
+import model.car.Car;
+import model.car.Family;
+import model.car.Luxury;
+import model.car.Sport;
+import model.staff.CEO;
+import model.staff.ITNerd;
+import model.staff.Receptionist;
+import model.staff.Staff;
+
 public class Util {
 
         static String[] name = { "Bradley Arnoldo", "Clay Trey", "Bird Carroll", "Swanson Hugo", "Randolph Rogelio",
                         "Farmer Ilene", "Parrish Rosanna", "Morrison Jay", "Knapp Catherine", "Norman Field" };
-        static String[] salaryLevel = { "Low", "Medium", "High" };
         static String[] dataOfBirth = { "08/11/1979", "09/02/1989", "19/03/2000", "30/06/1985", "15/12/1986",
                         "19/06/1985", "24/10/1994", "19/03/1988", "20/04/1990", "15/10/1991", "05/06/1993",
                         "09/07/1984", "10/02/1990", "06/07/1978", "19/03/1990", "12/12/1995", "05/05/1977",
@@ -34,14 +43,97 @@ public class Util {
         static String[] numberSeats = { "2", "3", "4", "5", "6", "7" };
 
         public static void main(String[] args) {
-                for (int i = 0; i < 100; i++) {
-                        System.out.println(randomItem(make));
+                /*
+                 * Car c = randomCar();
+                 * 
+                 * for (int i = 0; i < 10; i++) { c = randomCar();
+                 * System.out.println(c.getRegNumber()); System.out.println(c.getType());
+                 * System.out.println(c.getMake()); System.out.println(c.getModel());
+                 * System.out.println(c.getNumberSeats()); c.displaySpeciality(); }
+                 */
+
+                /*
+                 * Staff s = randomStaff();
+                 * 
+                 * for (int i = 0; i < 100; i++) { s = randomStaff();
+                 * System.out.println(s.getName()); System.out.println(s.getId());
+                 * System.out.println(s.getSalaryLevel()); System.out.println(s.getTask());
+                 * 
+                 * }
+                 */
+
+                Customer c = null;
+
+                for (int i = 0; i < 10; i++) {
+                        c = randomCustomer();
+
+                        System.out.println(c.getName());
+                        System.out.println(c.getCreditCardNumber());
+                        System.out.println(c.getDateOfBirth());
 
                 }
+
+        }
+
+        public static Customer randomCustomer() {
+                Customer customer = new Customer(randomItem(name), randomItem(creditCardNumber),
+                                randomItem(dataOfBirth));
+                return customer;
+        }
+
+        public static Car randomCar() {
+
+                Car car = null;
+
+                String makeRandom = randomItem(make);
+                String modelRandom = randomItem(model);
+                String numberSeatsRandom = randomItem(numberSeats);
+
+                switch (randomNumber(3)) {
+                        case 0:
+                                car = new Family(makeRandom, modelRandom, numberSeatsRandom);
+                                break;
+                        case 1:
+                                car = new Sport(makeRandom, modelRandom, numberSeatsRandom);
+                                break;
+                        case 2:
+                                car = new Luxury(makeRandom, modelRandom, numberSeatsRandom);
+                                break;
+                        default:
+                                break;
+                }
+
+                return car;
+        }
+
+        public static Staff randomStaff() {
+
+                Staff staff = null;
+
+                String nameRandom = randomItem(name);
+
+                switch (randomNumber(3)) {
+                        case 0:
+                                staff = new Receptionist(nameRandom);
+                                break;
+                        case 1:
+                                staff = new ITNerd(nameRandom);
+                                break;
+                        case 2:
+                                staff = new CEO(nameRandom);
+                                break;
+                        default:
+                                break;
+                }
+
+                return staff;
+        }
+
+        public static int randomNumber(int max) {
+                return new Random().nextInt(max);
         }
 
         public static String randomItem(String[] array) {
-                String item = array[new Random().nextInt(array.length)];
-                return item;
+                return array[randomNumber(array.length)];
         }
 }

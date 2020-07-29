@@ -2,8 +2,8 @@ package model.car;
 
 public class Sport extends Car {
 
-    public Sport(String regNumber, String make, String model, String numberSeats) {
-        super(regNumber, make, model, numberSeats);
+    public Sport(String make, String model, String numberSeats) {
+        super(make, model, numberSeats);
         setType("Sport");
     }
 
