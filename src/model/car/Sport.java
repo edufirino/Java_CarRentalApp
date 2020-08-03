@@ -8,7 +8,7 @@ public class Sport extends Car {
     }
 
     public void displaySpeciality() {
-        System.out.println("Accelerate!!! No Speed Radar can catch us!");
+        System.out.println("Sport Car Speciality: Accelerate!!! No Speed Radar can catch us!");
     }
 
 }

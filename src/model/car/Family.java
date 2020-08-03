@@ -7,6 +7,7 @@ public class Family extends Car {
     }
 
     public void displaySpeciality() {
-        System.out.println("You have 5 kids and it's grocery time? Don't worry I've ALL the space you need!");
+        System.out.println(
+                "Family Car Speciality: You have 5 kids and it's grocery time? Don't worry I have ALL the space you need!");
     }
 }

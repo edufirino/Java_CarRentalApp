@@ -30,6 +30,8 @@ public abstract class Staff {
     private String id;
     private String salaryLevel;
     private String task;
+    private String type;
+    public static String[] types = { "ITNerd", "Receptionist", "CEO" };
 
     static int idCounter = 1;
 
@@ -37,6 +39,14 @@ public abstract class Staff {
         this.id = "" + idCounter;
         idCounter++;
         this.name = name;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getTask() {

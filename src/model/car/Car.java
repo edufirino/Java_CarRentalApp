@@ -8,36 +8,10 @@ public abstract class Car {
 
     private String type;
     static int idCounter = 1;
-
-    public static void main(String[] args) {
-        Car c = new Luxury("Honda", "Civic", "5");
-        System.out.println(c.getRegNumber());
-        System.out.println(c.getType());
-        System.out.println(c.getMake());
-        System.out.println(c.getModel());
-        System.out.println(c.getNumberSeats());
-        c.displaySpeciality();
-
-        c = new Family("Fiat", "Uno", "6");
-        System.out.println(c.getRegNumber());
-        System.out.println(c.getType());
-        System.out.println(c.getMake());
-        System.out.println(c.getModel());
-        System.out.println(c.getNumberSeats());
-        c.displaySpeciality();
-
-        c = new Sport("WolksWagen", "Gol", "7");
-        System.out.println(c.getRegNumber());
-        System.out.println(c.getType());
-        System.out.println(c.getMake());
-        System.out.println(c.getModel());
-        System.out.println(c.getNumberSeats());
-        c.displaySpeciality();
-
-    }
+    public static String[] types = { "Luxury", "Sport", "Family" };
 
     public Car(String make, String model, String numberSeats) {
-        this.regNumber = "IRL - " + idCounter;
+        this.regNumber = "IRL-" + idCounter;
         idCounter++;
         setMake(make);
         setModel(model);

@@ -2,11 +2,17 @@ package model;
 
 public class Customer {
 
+    private String id;
     private String name;
     private String creditCardNumber;
     private String dateOfBirth;
 
+    static int idCounter = 1;
+
     public Customer(String name, String creditCardNumber, String dateOfBirth) {
+        this.id = "" + idCounter;
+        idCounter++;
+
         this.name = name;
         this.creditCardNumber = creditCardNumber;
         this.dateOfBirth = dateOfBirth;
@@ -34,6 +40,10 @@ public class Customer {
 
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
+    }
+
+    public String getId() {
+        return id;
     }
 
 }

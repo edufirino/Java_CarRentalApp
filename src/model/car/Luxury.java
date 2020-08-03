@@ -8,7 +8,7 @@ public class Luxury extends Car {
     }
 
     public void displaySpeciality() {
-        System.out.println("Are you thirsty? I have some champagne in the fridge ;)");
+        System.out.println("Luxury Car Speciality: Are you thirsty? I have some champagne in the fridge ;)");
     }
 
 }
